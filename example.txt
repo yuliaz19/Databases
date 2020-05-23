@@ -1,0 +1,26 @@
+.my.ini
+[client]
+user=root
+password=
+
+
+
+CREATE DATABASE IF NOT EXISTS example;
+
+USE example;
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+  id INT,
+  name VARCHAR(255));
+  
+CREATE DATABASE IF NOT EXISTS sample; 
+
+mysql $ mysqldump example > example.sql;
+
+mysql $ mysql sample < example.sql;
+
+--Дополнительно:
+
+mysql $ mysqldump mysql help_keyword -w"help_keyword_id <=100" > mysql1.sql;
